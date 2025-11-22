@@ -1,0 +1,56 @@
+{
+    "title": "Smith Wedding - May 2024",
+    "description": "Thank you for celebrating with us! Download your favorite photos below.",
+    "downloadAllLink": "https://drive.google.com/drive/folders/YOUR_FOLDER_ID_HERE?usp=sharing",
+    "photos": [
+        {
+            "url": "https://drive.google.com/uc?export=view&id=PHOTO_ID_1",
+            "thumbnail": "https://drive.google.com/uc?export=view&id=PHOTO_ID_1",
+            "fullsize": "https://drive.google.com/file/d/PHOTO_ID_1/view",
+            "title": "Ceremony"
+        },
+        {
+            "url": "https://drive.google.com/uc?export=view&id=PHOTO_ID_2",
+            "thumbnail": "https://drive.google.com/uc?export=view&id=PHOTO_ID_2",
+            "fullsize": "https://drive.google.com/file/d/PHOTO_ID_2/view",
+            "title": "Reception"
+        },
+        {
+            "url": "https://drive.google.com/uc?export=view&id=PHOTO_ID_3",
+            "thumbnail": "https://drive.google.com/uc?export=view&id=PHOTO_ID_3",
+            "fullsize": "https://drive.google.com/file/d/PHOTO_ID_3/view",
+            "title": "First Dance"
+        }
+    ]
+}
+```
+
+---
+
+## 🚀 Complete Setup Instructions
+
+### **STEP 1: Prepare Your Files Locally**
+
+1. **Create a folder on your computer** called `gallery`
+
+2. **Inside `gallery`, create these subfolders:**
+   - `css`
+   - `js`
+   - `galleries`
+
+3. **Create the files:**
+   - Copy the HTML code into `index.html`
+   - Copy the CSS code into `css/style.css`
+   - Copy the JavaScript code into `js/gallery.js`
+   - Copy the JSON code into `galleries/example-client.json`
+
+Your folder structure should look exactly like this:
+```
+gallery/
+  ├── index.html
+  ├── css/
+  │   └── style.css
+  ├── js/
+  │   └── gallery.js
+  └── galleries/
+      └── example-client.json
