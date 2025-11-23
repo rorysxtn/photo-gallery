@@ -75,7 +75,7 @@ def create_gallery_json(folder_id, output_file, title="Photo Gallery", descripti
         
         photos.append({
             'url': f"https://lh3.googleusercontent.com/d/{file_id}",
-            'thumbnail': f"lh3.googleusercontent.com/d/{file_id}=w500",
+            'thumbnail': f"https://lh3.googleusercontent.com/d/{file_id}=w500",
             'fullsize': f"https://lh3.googleusercontent.com/d/{file_id}",
             'title': os.path.splitext(file_name)[0]  # Remove file extension
         })
