@@ -4,34 +4,31 @@
 
 // Map passwords to gallery collections
 // Each password can have multiple galleries
+// Photo counts are automatically fetched from each gallery file
 const GALLERIES = {
-    'trinity': {
-        name: 'Trinity Collection',
+    'DUFC2526': {
+        name: 'DUFC 2025-2026',
         galleries: [
             {
                 title: 'DUFC VS INSTONIANS | 2025 | COLLEGE PARK',
-                photoCount: 45,
-                file: 'galleries/trinity-ceremony.json'
+                file: 'galleries/example-client.json'
             },
             {
                 title: 'WEDDING RECEPTION',
-                photoCount: 78,
                 file: 'galleries/trinity-reception.json'
             },
             {
                 title: 'PORTRAITS',
-                photoCount: 32,
                 file: 'galleries/trinity-portraits.json'
             }
         ]
     },
-    // Example of a single gallery (backwards compatible)
+    // Example of a single gallery
     // 'password123': {
     //     name: 'Smith Family',
     //     galleries: [
     //         {
     //             title: 'FAMILY PHOTOS',
-    //             photoCount: 50,
     //             file: 'galleries/smith-family.json'
     //         }
     //     ]
@@ -108,17 +105,41 @@ document.addEventListener('DOMContentLoaded', function() {
 // GALLERY SELECTION
 // ===================================
 
-function displayGallerySelection(collection) {
+async function displayGallerySelection(collection) {
     const collectionTitle = document.getElementById('collection-title');
     const galleryList = document.getElementById('gallery-selection-list');
     
     collectionTitle.textContent = collection.name;
-    galleryList.innerHTML = '';
+    galleryList.innerHTML = '<p style="color: var(--text-secondary); font-size: 12px; font-weight: 300;">Loading galleries...</p>';
     
-    collection.galleries.forEach((gallery, index) => {
-        const listItem = createGalleryListItem(gallery, index);
+    // Load photo counts for all galleries
+    const galleriesWithCounts = await Promise.all(
+        collection.galleries.map(async (gallery, index) => {
+            const count = await fetchPhotoCount(gallery.file);
+            return { ...gallery, photoCount: count, index };
+        })
+    );
+    
+    // Clear loading message and display galleries
+    galleryList.innerHTML = '';
+    galleriesWithCounts.forEach((gallery) => {
+        const listItem = createGalleryListItem(gallery, gallery.index);
         galleryList.appendChild(listItem);
     });
+}
+
+async function fetchPhotoCount(galleryFile) {
+    try {
+        const response = await fetch(galleryFile);
+        if (!response.ok) {
+            return 0;
+        }
+        const data = await response.json();
+        return data.photos ? data.photos.length : 0;
+    } catch (error) {
+        console.error('Error fetching photo count:', error);
+        return 0;
+    }
 }
 
 function createGalleryListItem(gallery, index) {
@@ -132,7 +153,7 @@ function createGalleryListItem(gallery, index) {
     
     const count = document.createElement('p');
     count.className = 'gallery-list-count';
-    count.textContent = `${gallery.photoCount || 0} photos`;
+    count.textContent = `${gallery.photoCount} photo${gallery.photoCount !== 1 ? 's' : ''}`;
     
     item.appendChild(title);
     item.appendChild(count);
