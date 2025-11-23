@@ -5,7 +5,7 @@
 // Map passwords to gallery JSON files
 // ADD YOUR GALLERIES HERE
 const GALLERIES = {
-    'demo2024': 'galleries/example-client.json',
+    'trinity': 'galleries/example-client.json',
     // Add more galleries like this:
     // 'wedding2024': 'galleries/smith-wedding.json',
     // 'corporate456': 'galleries/corporate-event.json',
