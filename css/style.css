@@ -274,8 +274,8 @@ body {
 
 .header-actions .instagram-link svg {
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 }
 
 /* Buttons - Plain style with subtle hover */
@@ -296,7 +296,7 @@ body {
 }
 
 .btn:hover {
-    background: var(--border-color);
+    background: transparent;
     color: var(--secondary-color);
 }
 
@@ -316,7 +316,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: var(--border-color);
+    background: transparent;
     color: var(--secondary-color);
 }
 
@@ -326,7 +326,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background: var(--border-color);
+    background: transparent;
     color: var(--secondary-color);
 }
 
@@ -364,10 +364,16 @@ body {
     color: var(--text-primary);
 }
 
+/* Download Controls - Separate section */
+.download-controls-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 60px 32px;
+}
+
 .download-controls {
     display: flex;
     gap: 24px;
-    margin-top: 24px;
     flex-wrap: wrap;
 }
 
@@ -592,8 +598,8 @@ body {
 
 .instagram-link svg {
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 }
 
 .footer-text {
@@ -671,6 +677,10 @@ body {
         min-width: auto;
     }
     
+    .download-controls-wrapper {
+        padding: 0 24px 24px;
+    }
+    
     .download-controls {
         flex-direction: column;
         gap: 12px;
@@ -724,6 +734,10 @@ body {
     
     .gallery-info {
         padding: 20px 16px 12px;
+    }
+    
+    .download-controls-wrapper {
+        padding: 0 16px 20px;
     }
     
     .gallery-info h2 {
