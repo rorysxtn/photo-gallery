@@ -1,13 +1,24 @@
 {
-    "title": "Smith Wedding - May 2024",
-    "description": "Thank you for celebrating with us! Download your favorite photos below.",
+    "title": "DUFC vs Instonians | 2025 | College Park",
     "downloadAllLink": "https://drive.google.com/drive/folders/1EbWgOR2xayFOLmUR5zwDiT9cTeHldMns?usp=sharing",
     "photos": [
+        {
+            "url": "https://drive.google.com/thumbnail?id=1xyY_hA3SU1pxEqUumZbuteQE5qRMjEe1&sz=w1000",
+            "thumbnail": "https://drive.google.com/thumbnail?id=1xyY_hA3SU1pxEqUumZbuteQE5qRMjEe1&sz=w500",
+            "fullsize": "https://drive.google.com/file/d/1xyY_hA3SU1pxEqUumZbuteQE5qRMjEe1/view",
+            "title": "Trinity - Format 1 (thumbnail API)"
+        },
+        {
+            "url": "https://lh3.googleusercontent.com/d/1xyY_hA3SU1pxEqUumZbuteQE5qRMjEe1",
+            "thumbnail": "https://lh3.googleusercontent.com/d/1xyY_hA3SU1pxEqUumZbuteQE5qRMjEe1=w500",
+            "fullsize": "https://drive.google.com/file/d/1xyY_hA3SU1pxEqUumZbuteQE5qRMjEe1/view",
+            "title": "Trinity - Format 2 (googleusercontent)"
+        },
         {
             "url": "https://drive.google.com/uc?export=view&id=1xyY_hA3SU1pxEqUumZbuteQE5qRMjEe1",
             "thumbnail": "https://drive.google.com/uc?export=view&id=1xyY_hA3SU1pxEqUumZbuteQE5qRMjEe1",
             "fullsize": "https://drive.google.com/file/d/1xyY_hA3SU1pxEqUumZbuteQE5qRMjEe1/view",
-            "title": "Trinity"
+            "title": "Trinity - Format 3 (uc?export)"
         }
     ]
 }
