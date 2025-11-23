@@ -434,6 +434,12 @@ body {
 .photo-item.selected:hover {
     outline: 3px solid var(--success-color);
     outline-offset: -3px;
+    transform: none;
+    box-shadow: none;
+}
+
+.photo-item.selected:hover img {
+    transform: none;
 }
 
 /* ===================================
