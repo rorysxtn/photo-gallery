@@ -72,13 +72,6 @@ body {
     text-align: center;
 }
 
-.logo h1 {
-    font-size: 72px;
-    margin-bottom: 24px;
-    font-weight: 200;
-    letter-spacing: -0.02em;
-}
-
 .password-container h2 {
     font-size: 20px;
     font-weight: 300;
@@ -137,8 +130,8 @@ body {
 
 .input-group button:hover {
     background: var(--primary-hover);
-    transform: none;
-    box-shadow: none;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .input-group button:active {
@@ -151,18 +144,6 @@ body {
     font-weight: 300;
     min-height: 20px;
     margin-bottom: 8px;
-}
-
-.help-text {
-    margin-top: 32px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border-color);
-}
-
-.help-text p {
-    color: var(--text-secondary);
-    font-size: 12px;
-    font-weight: 300;
 }
 
 /* ===================================
@@ -222,7 +203,7 @@ body {
     height: 140px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1600px;
     margin: 0 auto;
     width: 100%;
@@ -323,7 +304,7 @@ body {
     margin: 0 auto;
     padding: 0 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
@@ -333,7 +314,6 @@ body {
 .header-left {
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
 .header-left h1 {
@@ -349,12 +329,15 @@ body {
     background: transparent;
     border: none;
     color: var(--text-primary);
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 0;
+    margin-right: 20px;
     transition: color 0.2s;
     font-weight: 300;
     line-height: 1;
+    display: flex;
+    align-items: center;
 }
 
 .btn-back:hover {
@@ -502,6 +485,7 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+    align-items: start;
 }
 
 .photo-item {
@@ -512,6 +496,7 @@ body {
     box-shadow: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .photo-item:hover {
@@ -523,7 +508,7 @@ body {
 .photo-item img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     transition: transform 0.3s ease;
 }
@@ -916,10 +901,6 @@ body {
     
     .gallery-info h2 {
         font-size: 12px;
-    }
-    
-    .logo h1 {
-        font-size: 56px;
     }
 }
 
