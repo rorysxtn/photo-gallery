@@ -206,11 +206,12 @@ body {
 
 #gallery-screen {
     flex-direction: column;
+    background: var(--background);
 }
 
 /* Header - Minimal style like filmbyrossi.com */
 .gallery-header {
-    background: var(--white);
+    background: var(--background);
     border-bottom: 1px solid var(--border-color);
     padding: 20px 0;
     position: sticky;
@@ -346,7 +347,7 @@ body {
     position: relative;
     border-radius: var(--radius);
     overflow: hidden;
-    background: var(--white);
+    background: var(--background);
     box-shadow: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -533,17 +534,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
 }
 
 .footer-social {
-    margin-bottom: 8px;
+    margin-bottom: 0;
 }
 
 .instagram-link {
     color: var(--text-primary);
     transition: color 0.2s;
     display: inline-block;
+    text-decoration: none;
 }
 
 .instagram-link:hover {
@@ -552,6 +554,8 @@ body {
 
 .instagram-link svg {
     display: block;
+    width: 20px;
+    height: 20px;
 }
 
 .footer-text {
@@ -563,6 +567,7 @@ body {
 
 .footer-text p {
     margin: 0;
+    color: var(--text-primary);
 }
 
 .footer-text a {
@@ -573,6 +578,10 @@ body {
 
 .footer-text a:hover {
     color: var(--secondary-color);
+}
+
+.footer-text a:visited {
+    color: var(--text-primary);
 }
 
 /* ===================================
