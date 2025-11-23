@@ -11,26 +11,87 @@ const GALLERIES = {
         galleries: [
             {
                 title: 'DUFC VS Blackrock | 2025 | COLLEGE PARK',
-                file: 'galleries/BlackrockCP.json'
+                file: 'galleries/25-26/BlackrockCP.json'
             },
             {
                 title: 'DUFC VS NAAS | 2025 | COLLEGE PARK',
-                file: 'galleries/NaasCP.json'
+                file: 'galleries/25-26/NaasCP.json'
             },
             {
                 title: 'DUFC VS INSTONIANS | 2025 | COLLEGE PARK',
-                file: 'galleries/InstoniansCP.json'
+                file: 'galleries/25-26/InstoniansCP.json'
             },
             {
                 title: 'DUFC VS OLD WESLEY | 2025 | DONNYBROOK',
-                file: 'galleries/OldWesleyD.json'
+                file: 'galleries/25-26/OldWesleyD.json'
             }, 
             {
                 title: 'DUFC VS HIGHFIELD | 2025 | COLLEGE PARK',
-                file: 'galleries/HIGHFIELDCP.json'
+                file: 'galleries/25-26/HighfieldCP.json'
             }
         ]
     },
+    'DUFC2425': {
+        name: 'DUFC 2024-2025',
+        galleries: [
+            {
+                title: 'DUFC vs Blackrock | 2024 | College Park',
+                file: 'galleries/24-25/BlackrockCP2024.json'
+            },
+            {
+                title: 'DUFC vs Cashel | 2025 | College Park',
+                file: 'galleries/24-25/CashelCP2025.json'
+            },
+            {
+                title: 'DUFC vs Florida State University | 2024 | College Park',
+                file: 'galleries/24-25/FloridaStateCP2024.json'
+            },
+            {
+                title: 'DUFC vs Greystones | 2025 | College Park',
+                file: 'galleries/24-25/GreystonesCP2025.json'
+            },
+            {
+                title: 'DUFC vs Highfield | 2025 | College Park',
+                file: 'galleries/24-25/HighfieldCP2025.json'
+            },
+            {
+                title: 'DUFC vs Naas | 2024 | College Park',
+                file: 'galleries/24-25/NaasCP2024.json'
+            },
+            {
+                title: 'DUFC vs Nenagh | 2025 | College Park',
+                file: 'galleries/24-25/NenaghCP2025.json'
+            },
+            {
+                title: 'DUFC vs Old Belvo | 2024 | College Park',
+                file: 'galleries/24-25/OldBelvoCP2.json'
+            },
+            {
+                title: 'DUFC vs Old Belvo | 2024 | College Park | Friendly',
+                file: 'galleries/24-25/OldBelvoCP2024.json'
+            },
+            {
+                title: 'DUFC vs Old Wesley | 2024 | Donnybrook',
+                file: 'galleries/24-25/OldWesleyD2024.json'
+            },
+            {
+                title: 'DUFC vs Shannon | 2025 | College Park',
+                file: 'galleries/24-25/ShannonCP2025.json'
+            },
+            {
+                title: 'DUFC vs UCC | 2025 | College Park',
+                file: 'galleries/24-25/UCCCP2025.json'
+            },
+            {
+                title: 'DUFC vs UCDB | 2025 | College Park',
+                file: 'galleries/24-25/UCDB2025.json'
+            },
+            {
+                title: 'DUFC vs UCDC | 2024 | College Park',
+                file: 'galleries/24-25/UCDCP2024.json'
+            }
+        ]
+    }
     // Example of a single gallery
     // 'password123': {
     //     name: 'Smith Family',
