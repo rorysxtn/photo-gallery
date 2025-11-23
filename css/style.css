@@ -497,6 +497,9 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .photo-item:hover {
@@ -507,7 +510,7 @@ body {
 
 .photo-item img {
     width: 100%;
-    height: auto;
+    max-height: calc((1600px - 240px - 80px) / 5 * 0.67);
     object-fit: contain;
     display: block;
     transition: transform 0.3s ease;
@@ -739,6 +742,10 @@ body {
         grid-template-columns: repeat(4, 1fr);
         gap: 18px;
     }
+    
+    .photo-item img {
+        max-height: 280px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -823,6 +830,10 @@ body {
         padding: 0 24px 32px;
     }
     
+    .photo-item img {
+        max-height: 200px;
+    }
+    
     .logout-section {
         padding: 32px 24px 48px;
     }
@@ -881,6 +892,10 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         padding: 0 16px 24px;
+    }
+    
+    .photo-item img {
+        max-height: 180px;
     }
     
     .logout-section {
