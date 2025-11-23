@@ -10,16 +10,20 @@ const GALLERIES = {
         name: 'DUFC 2025-2026',
         galleries: [
             {
+                title: 'DUFC VS Blackrock | 2025 | COLLEGE PARK',
+                file: 'galleries/BlackrockCP.json'
+            },
+            {
                 title: 'DUFC VS INSTONIANS | 2025 | COLLEGE PARK',
-                file: 'galleries/example-client.json'
+                file: 'galleries/InstoniansCP.json'
             },
             {
-                title: 'WEDDING RECEPTION',
-                file: 'galleries/trinity-reception.json'
+                title: 'DUFC VS NAAS | 2025 | COLLEGE PARK',
+                file: 'galleries/NaasCP.json'
             },
             {
-                title: 'PORTRAITS',
-                file: 'galleries/trinity-portraits.json'
+                title: 'DUFC VS OLD WESLEY | 2025 | DONNYBROOK',
+                file: 'galleries/OldWesleyCP.json'
             }
         ]
     },
