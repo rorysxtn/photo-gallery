@@ -5,13 +5,23 @@
 // Map passwords to gallery collections
 // Each password can have multiple galleries
 const GALLERIES = {
-    'DUFC2526': {
-        name: 'DUFC 2025-26',
+    'trinity': {
+        name: 'Trinity Collection',
         galleries: [
             {
-                title: 'Instonians | 2025 | College Park',
-                //thumbnail: 'path/to/ceremony-thumb.jpg',
-                file: 'galleries/example-client.json'
+                title: 'DUFC VS INSTONIANS | 2025 | COLLEGE PARK',
+                photoCount: 45,
+                file: 'galleries/trinity-ceremony.json'
+            },
+            {
+                title: 'WEDDING RECEPTION',
+                photoCount: 78,
+                file: 'galleries/trinity-reception.json'
+            },
+            {
+                title: 'PORTRAITS',
+                photoCount: 32,
+                file: 'galleries/trinity-portraits.json'
             }
         ]
     },
@@ -20,9 +30,8 @@ const GALLERIES = {
     //     name: 'Smith Family',
     //     galleries: [
     //         {
-    //             title: 'Family Photos',
-    //             description: 'Summer 2024',
-    //             thumbnail: 'path/to/thumb.jpg',
+    //             title: 'FAMILY PHOTOS',
+    //             photoCount: 50,
     //             file: 'galleries/smith-family.json'
     //         }
     //     ]
@@ -101,46 +110,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function displayGallerySelection(collection) {
     const collectionTitle = document.getElementById('collection-title');
-    const galleryGrid = document.getElementById('gallery-selection-grid');
+    const galleryList = document.getElementById('gallery-selection-list');
     
     collectionTitle.textContent = collection.name;
-    galleryGrid.innerHTML = '';
+    galleryList.innerHTML = '';
     
     collection.galleries.forEach((gallery, index) => {
-        const galleryCard = createGalleryCard(gallery, index);
-        galleryGrid.appendChild(galleryCard);
+        const listItem = createGalleryListItem(gallery, index);
+        galleryList.appendChild(listItem);
     });
 }
 
-function createGalleryCard(gallery, index) {
-    const card = document.createElement('div');
-    card.className = 'gallery-card';
-    card.onclick = () => selectGallery(index);
-    
-    const thumbnail = document.createElement('div');
-    thumbnail.className = 'gallery-card-thumbnail';
-    if (gallery.thumbnail) {
-        thumbnail.style.backgroundImage = `url(${gallery.thumbnail})`;
-    } else {
-        thumbnail.innerHTML = '<div class="gallery-card-icon">📸</div>';
-    }
-    
-    const content = document.createElement('div');
-    content.className = 'gallery-card-content';
+function createGalleryListItem(gallery, index) {
+    const item = document.createElement('div');
+    item.className = 'gallery-list-item';
+    item.onclick = () => selectGallery(index);
     
     const title = document.createElement('h3');
+    title.className = 'gallery-list-title';
     title.textContent = gallery.title;
     
-    const description = document.createElement('p');
-    description.textContent = gallery.description;
+    const count = document.createElement('p');
+    count.className = 'gallery-list-count';
+    count.textContent = `${gallery.photoCount || 0} photos`;
     
-    content.appendChild(title);
-    content.appendChild(description);
+    item.appendChild(title);
+    item.appendChild(count);
     
-    card.appendChild(thumbnail);
-    card.appendChild(content);
-    
-    return card;
+    return item;
 }
 
 function selectGallery(index) {
