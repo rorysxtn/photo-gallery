@@ -5,26 +5,13 @@
 // Map passwords to gallery collections
 // Each password can have multiple galleries
 const GALLERIES = {
-    'trinity': {
-        name: 'Trinity Collection',
+    'DUFC2526': {
+        name: 'DUFC 2025-26',
         galleries: [
             {
-                title: 'Wedding Ceremony',
-                description: 'Beautiful moments from the ceremony',
-                thumbnail: 'path/to/ceremony-thumb.jpg',
-                file: 'galleries/trinity-ceremony.json'
-            },
-            {
-                title: 'Wedding Reception',
-                description: 'Dancing and celebration',
-                thumbnail: 'path/to/reception-thumb.jpg',
-                file: 'galleries/trinity-reception.json'
-            },
-            {
-                title: 'Portraits',
-                description: 'Couple and family portraits',
-                thumbnail: 'path/to/portraits-thumb.jpg',
-                file: 'galleries/trinity-portraits.json'
+                title: 'Instonians | 2025 | College Park',
+                //thumbnail: 'path/to/ceremony-thumb.jpg',
+                file: 'galleries/example-client.json'
             }
         ]
     },
