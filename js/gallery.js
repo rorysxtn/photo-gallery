@@ -2,14 +2,44 @@
 // CONFIGURATION
 // ===================================
 
-// Map passwords to gallery JSON files
-// ADD YOUR GALLERIES HERE
+// Map passwords to gallery collections
+// Each password can have multiple galleries
 const GALLERIES = {
-    //demo2024
-    'trinity': 'galleries/example-client.json',
-    // Add more galleries like this:
-    // 'wedding2024': 'galleries/smith-wedding.json',
-    // 'corporate456': 'galleries/corporate-event.json',
+    'trinity': {
+        name: 'Trinity Collection',
+        galleries: [
+            {
+                title: 'Wedding Ceremony',
+                description: 'Beautiful moments from the ceremony',
+                thumbnail: 'path/to/ceremony-thumb.jpg',
+                file: 'galleries/trinity-ceremony.json'
+            },
+            {
+                title: 'Wedding Reception',
+                description: 'Dancing and celebration',
+                thumbnail: 'path/to/reception-thumb.jpg',
+                file: 'galleries/trinity-reception.json'
+            },
+            {
+                title: 'Portraits',
+                description: 'Couple and family portraits',
+                thumbnail: 'path/to/portraits-thumb.jpg',
+                file: 'galleries/trinity-portraits.json'
+            }
+        ]
+    },
+    // Example of a single gallery (backwards compatible)
+    // 'password123': {
+    //     name: 'Smith Family',
+    //     galleries: [
+    //         {
+    //             title: 'Family Photos',
+    //             description: 'Summer 2024',
+    //             thumbnail: 'path/to/thumb.jpg',
+    //             file: 'galleries/smith-family.json'
+    //         }
+    //     ]
+    // }
 };
 
 // ===================================
@@ -20,6 +50,8 @@ let currentGallery = null;
 let currentPhotoIndex = 0;
 let isSelectMode = false;
 let selectedPhotos = new Set();
+let currentPassword = null;
+let currentGalleryCollection = null;
 
 // ===================================
 // PASSWORD AUTHENTICATION
@@ -35,11 +67,20 @@ function checkPassword() {
     
     // Check if password exists in our gallery mapping
     if (GALLERIES[password]) {
-        // Show loading screen
+        currentPassword = password;
+        currentGalleryCollection = GALLERIES[password];
+        
+        // Store password for this session
+        sessionStorage.setItem('currentPassword', password);
+        
+        // Show loading screen briefly
         showScreen('loading-screen');
         
-        // Load the gallery
-        loadGallery(GALLERIES[password], password);
+        // Show gallery selection screen
+        setTimeout(() => {
+            displayGallerySelection(currentGalleryCollection);
+            showScreen('gallery-selection-screen');
+        }, 500);
     } else {
         // Show error
         errorMessage.textContent = 'Incorrect password. Please try again.';
@@ -66,6 +107,71 @@ document.addEventListener('DOMContentLoaded', function() {
         passwordInput.focus();
     }
 });
+
+// ===================================
+// GALLERY SELECTION
+// ===================================
+
+function displayGallerySelection(collection) {
+    const collectionTitle = document.getElementById('collection-title');
+    const galleryGrid = document.getElementById('gallery-selection-grid');
+    
+    collectionTitle.textContent = collection.name;
+    galleryGrid.innerHTML = '';
+    
+    collection.galleries.forEach((gallery, index) => {
+        const galleryCard = createGalleryCard(gallery, index);
+        galleryGrid.appendChild(galleryCard);
+    });
+}
+
+function createGalleryCard(gallery, index) {
+    const card = document.createElement('div');
+    card.className = 'gallery-card';
+    card.onclick = () => selectGallery(index);
+    
+    const thumbnail = document.createElement('div');
+    thumbnail.className = 'gallery-card-thumbnail';
+    if (gallery.thumbnail) {
+        thumbnail.style.backgroundImage = `url(${gallery.thumbnail})`;
+    } else {
+        thumbnail.innerHTML = '<div class="gallery-card-icon">📸</div>';
+    }
+    
+    const content = document.createElement('div');
+    content.className = 'gallery-card-content';
+    
+    const title = document.createElement('h3');
+    title.textContent = gallery.title;
+    
+    const description = document.createElement('p');
+    description.textContent = gallery.description;
+    
+    content.appendChild(title);
+    content.appendChild(description);
+    
+    card.appendChild(thumbnail);
+    card.appendChild(content);
+    
+    return card;
+}
+
+function selectGallery(index) {
+    const gallery = currentGalleryCollection.galleries[index];
+    showScreen('loading-screen');
+    loadGallery(gallery.file, currentPassword);
+}
+
+function backToGallerySelection() {
+    // Clear current gallery
+    currentGallery = null;
+    isSelectMode = false;
+    selectedPhotos.clear();
+    
+    // Show gallery selection
+    displayGallerySelection(currentGalleryCollection);
+    showScreen('gallery-selection-screen');
+}
 
 // ===================================
 // GALLERY LOADING
@@ -315,6 +421,8 @@ function logout() {
     if (confirm) {
         sessionStorage.removeItem('currentPassword');
         currentGallery = null;
+        currentPassword = null;
+        currentGalleryCollection = null;
         selectedPhotos.clear();
         isSelectMode = false;
         showScreen('password-screen');
@@ -345,7 +453,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const savedPassword = sessionStorage.getItem('currentPassword');
     if (savedPassword && GALLERIES[savedPassword]) {
         // Auto-login if session exists
+        currentPassword = savedPassword;
+        currentGalleryCollection = GALLERIES[savedPassword];
         showScreen('loading-screen');
-        loadGallery(GALLERIES[savedPassword], savedPassword);
+        setTimeout(() => {
+            displayGallerySelection(currentGalleryCollection);
+            showScreen('gallery-selection-screen');
+        }, 500);
     }
 });

@@ -47,12 +47,30 @@
         </div>
     </div>
 
+    <!-- Gallery Selection Screen -->
+    <div id="gallery-selection-screen" class="screen">
+        <div class="gallery-selection-container">
+            <header class="selection-header">
+                <h1 id="collection-title">Your Galleries</h1>
+                <button class="btn btn-secondary" onclick="logout()">Logout</button>
+            </header>
+            
+            <div class="selection-content">
+                <p class="selection-subtitle">Select a gallery to view</p>
+                <div id="gallery-selection-grid" class="gallery-selection-grid">
+                    <!-- Gallery cards will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Gallery Screen -->
     <div id="gallery-screen" class="screen">
         <!-- Header -->
         <header class="gallery-header">
             <div class="header-content">
                 <div class="header-left">
+                    <button class="btn-back" onclick="backToGallerySelection()" title="Back to galleries">←</button>
                     <h1>Rory O'Sullivan Sexton</h1>
                 </div>
                 <div class="header-actions right">
