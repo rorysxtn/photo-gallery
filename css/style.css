@@ -230,14 +230,6 @@ body {
     gap: 20px;
 }
 
-.gallery-header h1 {
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-}
-
 .header-actions {
     display: flex;
     gap: 24px;
@@ -245,7 +237,16 @@ body {
     align-items: center;
 }
 
-/* Buttons - Refined minimal style */
+.header-actions.left {
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.header-actions.right {
+    justify-content: flex-end;
+}
+
+/* Buttons - Plain style with subtle hover */
 .btn {
     padding: 10px 24px;
     border: none;
@@ -258,28 +259,43 @@ body {
     white-space: nowrap;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.btn:hover {
+    background: var(--border-color);
+    color: var(--secondary-color);
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+    background: transparent;
+    color: var(--text-primary);
 }
 
 .btn-primary {
-    background: var(--text-primary);
-    color: var(--white);
+    background: transparent;
+    color: var(--text-primary);
 }
 
 .btn-primary:hover {
-    background: var(--primary-hover);
-    transform: none;
-    box-shadow: none;
+    background: var(--border-color);
+    color: var(--secondary-color);
 }
 
 .btn-secondary {
     background: transparent;
     color: var(--text-primary);
-    border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
-    background: var(--white);
-    border-color: var(--text-primary);
+    background: var(--border-color);
+    color: var(--secondary-color);
 }
 
 .btn-small {
@@ -287,11 +303,20 @@ body {
     font-size: 11px;
 }
 
-/* Gallery Info - More subtle */
+/* Gallery Info - More subtle with title */
 .gallery-info {
     max-width: 1600px;
     margin: 0 auto;
     padding: 32px 60px 20px;
+}
+
+.gallery-info h2 {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
 }
 
 .gallery-info p {
@@ -532,15 +557,23 @@ body {
         padding: 0 24px;
         flex-direction: column;
         align-items: stretch;
+        gap: 16px;
     }
     
     .header-actions {
-        flex-direction: column;
+        flex-direction: row;
         gap: 12px;
+        flex-wrap: wrap;
+    }
+    
+    .header-actions.left,
+    .header-actions.right {
+        width: 100%;
     }
     
     .btn {
-        width: 100%;
+        flex: 1;
+        min-width: auto;
     }
     
     .photo-grid {
@@ -589,7 +622,7 @@ body {
         padding: 20px 16px 12px;
     }
     
-    .gallery-header h1 {
+    .gallery-info h2 {
         font-size: 12px;
     }
     
