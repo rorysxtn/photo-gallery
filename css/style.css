@@ -522,18 +522,57 @@ body {
    =================================== */
 
 .gallery-footer {
-    background: var(--white);
+    background: var(--background);
     border-top: 1px solid var(--border-color);
-    padding: 32px 24px;
+    padding: 48px 24px;
     text-align: center;
     margin-top: auto;
 }
 
-.gallery-footer p {
-    color: var(--text-secondary);
-    font-size: 12px;
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-social {
+    margin-bottom: 8px;
+}
+
+.instagram-link {
+    color: var(--text-primary);
+    transition: color 0.2s;
+    display: inline-block;
+}
+
+.instagram-link:hover {
+    color: var(--secondary-color);
+}
+
+.instagram-link svg {
+    display: block;
+}
+
+.footer-text {
+    color: var(--text-primary);
+    font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.02em;
+}
+
+.footer-text p {
+    margin: 0;
+}
+
+.footer-text a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-text a:hover {
+    color: var(--secondary-color);
 }
 
 /* ===================================
