@@ -14,16 +14,20 @@ const GALLERIES = {
                 file: 'galleries/BlackrockCP.json'
             },
             {
-                title: 'DUFC VS INSTONIANS | 2025 | COLLEGE PARK',
-                file: 'galleries/InstoniansCP.json'
-            },
-            {
                 title: 'DUFC VS NAAS | 2025 | COLLEGE PARK',
                 file: 'galleries/NaasCP.json'
             },
             {
+                title: 'DUFC VS INSTONIANS | 2025 | COLLEGE PARK',
+                file: 'galleries/InstoniansCP.json'
+            },
+            {
                 title: 'DUFC VS OLD WESLEY | 2025 | DONNYBROOK',
-                file: 'galleries/OldWesleyCP.json'
+                file: 'galleries/OldWesleyD.json'
+            }, 
+            {
+                title: 'DUFC VS HIGHFIELD | 2025 | COLLEGE PARK',
+                file: 'galleries/HIGHFIELDCP.json'
             }
         ]
     },
