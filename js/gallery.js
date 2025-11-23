@@ -83,11 +83,11 @@ const GALLERIES = {
                 file: 'galleries/24-25/UCCCP2025.json'
             },
             {
-                title: 'DUFC vs UCDB | 2025 | College Park',
+                title: 'DUFC vs UCD | 2025 | College Park | Colours',
                 file: 'galleries/24-25/UCDB2025.json'
             },
             {
-                title: 'DUFC vs UCDC | 2024 | College Park',
+                title: 'DUFC vs UCD | 2024 | College Park | Friendly',
                 file: 'galleries/24-25/UCDCP2024.json'
             }
         ]
