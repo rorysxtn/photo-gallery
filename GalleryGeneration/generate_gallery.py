@@ -25,7 +25,6 @@ def create_gallery_json(folder_id, output_file, title="Photo Gallery", descripti
         folder_id: Google Drive folder ID
         output_file: Output JSON filename (e.g., 'smith-wedding.json')
         title: Gallery title
-        description: Gallery description
         download_all_link: Link to download all photos (optional)
     """
     
@@ -118,7 +117,7 @@ if __name__ == "__main__":
         folder_id="1EbWgOR2xayFOLmUR5zwDiT9cTeHldMns",  # Your Google Drive folder ID
         output_file="InstoniansCP.json",               # Output filename
         title="DUFC vs Instonians | 2025 | College Park",               # Gallery title
-        download_all_link="https://drive.google.com/drive/folders/1EbWgOR2xayFOLmUR5zwDiT9cTeHldMns?usp=sharing"
+       download_all_link="https://drive.google.com/drive/folders/1EbWgOR2xayFOLmUR5zwDiT9cTeHldMns?usp=sharing"
     )
     
     print()
