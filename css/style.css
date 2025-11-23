@@ -418,36 +418,22 @@ body {
 /* Selection Mode */
 .photo-item.selectable {
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.photo-item.selectable::after {
-    content: '';
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 26px;
-    height: 26px;
-    border: 2px solid var(--white);
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.2);
-    transition: all 0.2s;
-    backdrop-filter: blur(4px);
+.photo-item.selectable:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.photo-item.selected::after {
-    content: '✓';
-    background: var(--success-color);
-    border-color: var(--success-color);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 600;
+.photo-item.selected {
+    outline: 3px solid var(--success-color);
+    outline-offset: -3px;
 }
 
-.photo-item.selectable:hover::after {
-    transform: scale(1.1);
+.photo-item.selected:hover {
+    outline: 3px solid var(--success-color);
+    outline-offset: -3px;
 }
 
 /* ===================================
