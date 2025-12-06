@@ -27,7 +27,7 @@ const GALLERIES = {
             }, 
             {
                 title: 'DUFC VS HIGHFIELD | 2025 | COLLEGE PARK',
-                file: 'galleries/25-26/HighfieldCP2526.json'
+                file: 'galleries/25-26/Highfield2526CP.json'
             }
         ]
     },
