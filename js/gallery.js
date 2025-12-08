@@ -91,6 +91,15 @@ const GALLERIES = {
                 file: 'galleries/24-25/UCDCP2024.json'
             }
         ]
+    }, 
+    'CWCCHRISTMAS': {
+        name: 'Clongowes Wood College Christmas Concert 2025',
+        galleries: [
+            {
+                title: 'Clongowes Wood College Christmas Concert 2025',
+                file: 'galleries/Clongowes/.json'
+            }
+        ]
     }
     // Example of a single gallery
     // 'password123': {
