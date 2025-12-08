@@ -97,7 +97,7 @@ const GALLERIES = {
         galleries: [
             {
                 title: 'Clongowes Wood College Christmas Concert 2025',
-                file: 'galleries/ClongowesChristmasConcert/.json'
+                file: 'galleries/Clongowes/ClongowesChristmasConcert/.json'
             }
         ]
     }
