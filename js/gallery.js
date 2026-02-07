@@ -28,6 +28,10 @@ const GALLERIES = {
             {
                 title: 'DUFC VS HIGHFIELD | 2025 | COLLEGE PARK',
                 file: 'galleries/25-26/HighfieldCP.json'
+            }, 
+            {
+                title: 'DUFC VS OLD WESLEY | 2026 | COLLEGE PARK',
+                file: 'galleries/25-26/OldWesleyCP.json'
             }
         ]
     },
@@ -544,4 +548,5 @@ document.addEventListener('DOMContentLoaded', function() {
             showScreen('gallery-selection-screen');
         }, 500);
     }
+
 });
