@@ -36,6 +36,10 @@ const GALLERIES = {
             {
                 title: 'DUFC VS OLD WESLEY | 2026 | COLLEGE PARK',
                 file: 'galleries/25-26/OldWesleyCP.json'
+            }, 
+            {
+                title: 'DUFC VS UCC | 2026 | COLLEGE PARK',
+                file: 'galleries/25-26/UCCCP.json'
             }
         ]
     },
@@ -554,4 +558,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
