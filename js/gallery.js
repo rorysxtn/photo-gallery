@@ -40,6 +40,14 @@ const GALLERIES = {
             {
                 title: 'DUFC VS UCC | 2026 | COLLEGE PARK',
                 file: 'galleries/25-26/UCCCP.json'
+            }, 
+            {
+                title: 'DUFC VS CITY OF ARMAGH | 2026 | COLLEGE PARK',
+                file: 'galleries/25-26/ArmaghCP.json'
+            }, 
+            {
+                title: 'DUFC VS INSTONIANS | 2026 | COLLEGE PARK | PROMOTION SEMI-FINAL',
+                file: 'galleries/25-26/InstoniansCP2.json'
             }
         ]
     },
