@@ -48,6 +48,10 @@ const GALLERIES = {
             {
                 title: 'DUFC VS INSTONIANS | 2026 | COLLEGE PARK | PROMOTION SEMI-FINAL',
                 file: 'galleries/25-26/InstoniansCP2.json'
+            }, 
+            {
+                title: 'DUFC VS UCD | 2026 | THE BOWL | PROMOTION FINAL',
+                file: 'galleries/25-26/UCDB.json'
             }
         ]
     },
