@@ -6,6 +6,15 @@
 // Each password can have multiple galleries
 // Photo counts are automatically fetched from each gallery file
 const GALLERIES = {
+    'DUFC2627': {
+        name: 'DUFC 2026-2027',
+        galleries: [
+            {
+                title: 'DUFC VS Nenagh | 2026 | COLLEGE PARK',
+                file: 'galleries/26-27/NenaghCP.json'
+            }
+        ]
+    },
     'DUFC2526': {
         name: 'DUFC 2025-2026',
         galleries: [
