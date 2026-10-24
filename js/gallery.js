@@ -10,7 +10,7 @@ const GALLERIES = {
         name: 'DUFC 2026-2027',
         galleries: [
             {
-                title: 'DUFC VS Nenagh | 2026 | COLLEGE PARK',
+                title: 'DUFC VS NENAGH | 2026 | COLLEGE PARK',
                 file: 'galleries/26-27/NenaghCP.json'
             }
         ]
