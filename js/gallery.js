@@ -12,6 +12,10 @@ const GALLERIES = {
             {
                 title: 'DUFC VS NENAGH | 2026 | COLLEGE PARK',
                 file: 'galleries/26-27/NenaghCP.json'
+            }, 
+            {
+                title: 'DUFC VS NAAS | 2026 | COLLEGE PARK',
+                file: 'galleries/26-27/NaasCP.json'    
             }
         ]
     },
